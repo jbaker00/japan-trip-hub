@@ -77,15 +77,24 @@ html { scroll-behavior: smooth; }
 .nav-links a {
   font-size: 13px;
   font-weight: 700;
-  color: #7a1f2b;
+  color: var(--ink);
   text-decoration: none;
   padding: 8px 14px;
   border-radius: 999px;
   white-space: nowrap;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, border 0.15s ease;
+  border: 2px solid transparent;
 }
-.nav-links a:hover { background: var(--sakura); }
-.nav-links a.active { background: var(--jr); color: white; }
+.nav-links a:hover {
+  background: var(--cream);
+  border-color: var(--jr);
+}
+.nav-links a.active {
+  background: var(--jr);
+  color: white;
+  border-color: var(--jr);
+  font-weight: 800;
+}
 @media (max-width: 700px) {
   .site-nav-inner { flex-wrap: nowrap; }
   .nav-logo { display: none; }
@@ -339,13 +348,13 @@ header.home-header .dates {
 .banner-note {
   max-width: 700px;
   margin: 24px auto 0;
-  background: #fff3f5;
-  border: 2px dashed var(--sakura-deep);
+  background: #f0f6f8;
+  border: 2px dashed var(--jr);
   border-radius: 14px;
   padding: 14px 20px;
   font-size: 14px;
   text-align: center;
-  color: #7a1f2b;
+  color: var(--ink);
 }
 
 /* ---------- Attractions tab bar (itinerary page) ---------- */
@@ -373,10 +382,10 @@ header.home-header .dates {
 }
 .menu-links.tabs a {
   background: var(--cream);
-  color: #7a1f2b;
+  color: var(--ink);
   border-radius: 10px 10px 0 0;
   padding: 10px 20px;
-  border: 2px solid var(--sakura);
+  border: 2px solid var(--jr);
   border-bottom: none;
   font-size: 14px;
   text-decoration: none;
@@ -531,8 +540,9 @@ header, footer.site-footer, .page-hero { position: relative; z-index: 1; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--sakura);
-  color: #7a1f2b;
+  background: var(--cream);
+  color: var(--ink);
+  border: 2px solid var(--jr);
   font-size: 13px;
   font-weight: 700;
   padding: 3px 12px;
