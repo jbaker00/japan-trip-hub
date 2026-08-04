@@ -250,6 +250,74 @@ header.home-header .dates {
   margin: 6px 0 0;
 }
 
+/* ---------- CTA Boxes (home page) ---------- */
+.cta-box-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 28px 0 12px;
+  justify-content: center;
+}
+.cta-box {
+  background: var(--cream);
+  border: 2px solid var(--jr);
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+  flex: 1 1 260px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+}
+.cta-box:hover {
+  background: #fff3f5;
+}
+.cta-clouds {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  font-size: 28px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+.cta-emoji {
+  font-size: 32px;
+  display: block;
+  margin-top: 8px;
+}
+.cta-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 8px;
+  color: var(--jr);
+}
+.cta-sub {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+.cta-links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.cta-links a {
+  font-size: 13px;
+  color: var(--jr);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: var(--sakura);
+}
+.cta-links a:hover {
+  background: var(--jr);
+  color: white;
+}
+
 .banner-note {
   max-width: 700px;
   margin: 24px auto 0;
