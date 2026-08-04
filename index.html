@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Japan Group Adventure | Oct 9–18 | Global Vibes Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --jr: #bc002d;       /* Japan flag red */
@@ -15,6 +18,9 @@
     --gold: #d4af37;
   }
   * { box-sizing: border-box; }
+  strong, b, .day-title, .day-badge, .day-city, header h1, .section-title, .footer-cta h3, .day-date, .btn {
+    font-family: 'M PLUS Rounded 1c', 'Kosugi Maru', 'Helvetica Neue', Arial, sans-serif;
+  }
   body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -432,13 +438,41 @@
 
   <div class="footer-cta">
     <h3>Real Details Coming Soon</h3>
-    <p style="opacity:0.75; font-size:14px;">Flights, hotel names, exact timing, and packing info will be added right here — this page updates any time without needing a new link. Bookmark it or download it below so you'll have it even without wifi.</p>
+    <p style="opacity:0.75; font-size:14px;">Flights, hotel names, exact timing, and packing info will be added right here — this page updates any time without needing a new link. Grab a copy below so you'll have it even without wifi — on the plane or once you're in Japan.</p>
     <div class="btn-row">
-      <button class="btn btn-primary" onclick="window.print()">📄 Download / Save as PDF</button>
-      <a class="btn btn-secondary" href="#">📧 Email Me This Page</a>
+      <button class="btn btn-primary" onclick="window.print()">🖨️ Print This Page</button>
+      <button class="btn btn-primary" id="downloadPdfBtn">⬇️ Download as PDF</button>
+      <a class="btn btn-secondary" id="emailBtn" href="#">📧 Email This Itinerary to Myself</a>
     </div>
+    <p style="opacity:0.55; font-size:12px; margin-top:14px;">Tip: on “Print,” choose <strong>“Save as PDF”</strong> as the destination (works the same on iPhone and Android) to keep an offline copy on your phone.</p>
   </div>
 </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+  document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+    var el = document.querySelector('main');
+    var opt = {
+      margin: 0.3,
+      filename: 'Japan-Trip-Itinerary-GlobalVibesTravel.pdf',
+      image: { type: 'jpeg', quality: 0.95 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(el).save();
+  });
+
+  document.getElementById('emailBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    var subject = encodeURIComponent('Our Japan Trip Itinerary (Oct 9–18) — Global Vibes Travel');
+    var body = encodeURIComponent(
+      'Hi!\n\nHere is the link to our Japan group trip itinerary — bookmark it, since it updates anytime with new details:\n\n' +
+      window.location.href +
+      '\n\nTip: open this link and tap Print > Save as PDF to keep an offline copy on your phone for the flight and for when you don\'t have wifi in Japan.\n\n🌸 Global Vibes Travel'
+    );
+    window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+  });
+</script>
 
 <footer class="site-footer">
   Made with 🌸 for our Global Vibes Travel group · Trip Hub v0.1 (sample content)
