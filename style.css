@@ -161,10 +161,11 @@ header.home-header .dates {
 .page-sticker {
   position: fixed;
   font-size: 40px;
-  opacity: 0.14;
+  opacity: 0;
   z-index: 0;
   pointer-events: none;
   filter: grayscale(0.1);
+  display: none;
 }
 .page-sticker.corner-tl { top: 74px; left: 18px; transform: rotate(-15deg); }
 .page-sticker.corner-tr { top: 74px; right: 18px; transform: rotate(15deg); }
@@ -174,12 +175,7 @@ header.home-header .dates {
   .page-sticker { font-size: 26px; opacity: 0.12; }
 }
 
-/* Hero banner (floral SVG) */
-.hero-banner {
-  width: 100%;
-  display: block;
-  margin-bottom: -8px; /* pull up into page-hero for seamless look */
-}
+/* Hero banner - removed for urban vibe */
 
 /* ---------- Photo strip (home page "Our Japan Adventure") ---------- */
 .photo-strip {
