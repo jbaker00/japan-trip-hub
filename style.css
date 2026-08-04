@@ -267,11 +267,11 @@ header.home-header .dates {
 }
 
 .cta-box-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 14px;
   margin: 28px 0 12px;
-  justify-content: center;
+  justify-items: center;
 }
 .cta-box {
   background: var(--cream);
@@ -279,14 +279,20 @@ header.home-header .dates {
   border-radius: 16px;
   padding: 16px 12px;
   text-align: center;
-  flex: 1 1 260px;
+  width: 100%;
+  max-width: 180px;
   position: relative;
   overflow: hidden;
   text-decoration: none;
   color: var(--ink);
 }
 .cta-box:hover {
-  background: #fff3f5;
+  background: var(--jr);
+  color: white;
+}
+.cta-box:hover .cta-title,
+.cta-box:hover .cta-sub {
+  color: white;
 }
 .cta-clouds {
   position: absolute;
@@ -306,12 +312,13 @@ header.home-header .dates {
   font-size: 16px;
   font-weight: 700;
   margin-top: 8px;
-  color: var(--jr);
+  color: var(--ink);
 }
 .cta-sub {
   font-size: 13px;
   opacity: 0.7;
   margin-top: 4px;
+  color: var(--ink);
 }
 .cta-links {
   margin-top: 10px;
