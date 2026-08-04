@@ -8,6 +8,85 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@700;800&family=Great+Vibes&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.reminder-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+.reminder-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: center;
+}
+.reminder-card-emoji {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.reminder-card h3 {
+  font-size: 18px;
+  color: var(--jr);
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+.reminder-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+.reminder-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reminder-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13.5px;
+  transition: all 0.2s ease;
+  border: 2px solid var(--jr);
+}
+.reminder-btn-primary {
+  background: var(--jr);
+  color: white;
+}
+.reminder-btn-primary:hover {
+  background: var(--sakura-deep);
+  border-color: var(--sakura-deep);
+}
+.reminder-btn-secondary {
+  background: white;
+  color: var(--jr);
+}
+.reminder-btn-secondary:hover {
+  background: var(--cream);
+}
+.whatsapp-card {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+}
+.whatsapp-card h3 {
+  color: white;
+}
+.whatsapp-card p {
+  color: #f0f0f0;
+}
+.reminder-btn-whatsapp {
+  background: white;
+  color: #25D366;
+  border-color: white;
+  font-weight: 700;
+}
+.reminder-btn-whatsapp:hover {
+  background: #f0f0f0;
+}
+</style>
 </head>
 <body>
 
@@ -34,18 +113,50 @@
 </nav>
 
 <div class="page-hero">
-  <h1>Save This Site For Offline Access</h1>
-  <div class="sub">Get it before you fly — no wifi needed after that</div>
+  <h1>Stay Connected & Organized</h1>
+  <div class="sub">Add to your calendar, join the group, and save offline</div>
 </div>
 
 <main>
-  <div class="footer-cta" style="margin-top:0;">
-    <h3>Grab a Copy Before You Fly</h3>
-    <p style="opacity:0.8; font-size:14.5px;">This site updates any time with new details — no new link needed. Download or print the full itinerary below so you have it on the plane and while you're in Japan without wifi.</p>
+  <div class="reminder-cards">
+
+    <div class="reminder-card">
+      <div class="reminder-card-emoji">📅</div>
+      <h3>Google Calendar</h3>
+      <p>Add the full Japan trip itinerary to your Google Calendar with all the details and dates.</p>
+      <div class="reminder-buttons">
+        <a href="#" class="reminder-btn reminder-btn-primary">Add to Google Calendar</a>
+      </div>
+    </div>
+
+    <div class="reminder-card">
+      <div class="reminder-card-emoji">📱</div>
+      <h3>Apple Calendar (iCal)</h3>
+      <p>Export the trip dates and events to Apple Calendar or any iCal-compatible app.</p>
+      <div class="reminder-buttons">
+        <a href="#" class="reminder-btn reminder-btn-primary">Download iCal File</a>
+      </div>
+    </div>
+
+    <div class="reminder-card whatsapp-card">
+      <div class="reminder-card-emoji">💬</div>
+      <h3>Join Our WhatsApp Group</h3>
+      <p>Connect with the group, share updates, ask questions, and stay in the loop before and during the trip!</p>
+      <div class="reminder-buttons">
+        <a href="#" class="reminder-btn reminder-btn-whatsapp">📲 Join WhatsApp Group</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-cta">
+    <h3>📥 Save This Site For Offline</h3>
+    <p style="opacity:0.8; font-size:14.5px;">This site updates any time with new details. Download or print the full itinerary below so you have it on the plane and in Japan without wifi.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="itinerary.html">🗺️ Go to Itinerary Page</a>
+      <a class="btn btn-secondary" href="itinerary.html">📄 Print as PDF</a>
     </div>
-    <p style="opacity:0.6; font-size:12.5px; margin-top:14px;">Tip: on the Itinerary page, use "Download as PDF" or "Print" (choose "Save as PDF") to keep an offline copy on your phone — works the same on iPhone and Android.</p>
+    <p style="opacity:0.6; font-size:12.5px; margin-top:14px;">💡 Tip: Use your browser's "Print" or "Save as PDF" feature (works on iPhone, Android, Mac, and Windows) to keep an offline copy.</p>
   </div>
 
 </main>
