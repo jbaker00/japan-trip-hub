@@ -181,6 +181,75 @@ header.home-header .dates {
   margin-bottom: -8px; /* pull up into page-hero for seamless look */
 }
 
+/* ---------- Photo strip (home page "Our Japan Adventure") ---------- */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-bottom: 12px;
+}
+@media (max-width: 800px) {
+  .photo-strip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .photo-strip { grid-template-columns: 1fr 1fr; }
+}
+.photo-card {
+  position: relative;
+  border-radius: 20px;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-size: cover;
+  background-position: center;
+}
+.photo-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+.photo-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
+}
+.photo-emoji {
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: 4px;
+  z-index: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+.photo-label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  font-family: 'Cinzel', 'Helvetica Neue', Arial, sans-serif;
+}
+.photo-tokyo   { background: linear-gradient(150deg, #ff9a9e 0%, #fecfef 60%, #fbc2eb 100%); }
+.photo-fuji    { background: linear-gradient(150deg, #a1c4fd 0%, #c2e9fb 60%, #eef1ff 100%); }
+.photo-kyoto   { background: linear-gradient(150deg, #f6d365 0%, #fda085 60%, #f6a1a5 100%); }
+.photo-nara    { background: linear-gradient(150deg, #a8e6cf 0%, #dcedc1 60%, #ffd3b6 100%); }
+.photo-osaka   { background: linear-gradient(150deg, #ff758c 0%, #ff7eb3 60%, #ffb199 100%); }
+.photo-note {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.65;
+  margin: 6px 0 0;
+}
+
 .banner-note {
   max-width: 700px;
   margin: 24px auto 0;
