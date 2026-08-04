@@ -254,7 +254,16 @@ header.home-header .dates {
   margin: 6px 0 0;
 }
 
-/* ---------- CTA Boxes (home page) ---------- */
+@media (max-width: 680px) {
+  .cta-box-row {
+    flex-direction: column;
+  }
+  .cta-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 .cta-box-row {
   display: flex;
   flex-wrap: wrap;
