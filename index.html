@@ -113,6 +113,64 @@
     color: #7a1f2b;
   }
 
+  .trip-menu {
+    max-width: 700px;
+    margin: 22px auto 0;
+    background: white;
+    border-radius: 18px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+  .trip-menu .menu-title {
+    font-family: 'M PLUS Rounded 1c', 'Kosugi Maru', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--jr);
+    margin-bottom: 12px;
+  }
+  .trip-menu .menu-line {
+    font-size: 14px;
+    color: #444;
+    margin: 6px 0;
+    line-height: 1.6;
+  }
+  .trip-menu .menu-line strong {
+    color: var(--ink);
+  }
+  .menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .menu-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--sakura);
+    color: #7a1f2b;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: 'M PLUS Rounded 1c', 'Kosugi Maru', sans-serif;
+    transition: background 0.15s ease;
+  }
+  .menu-links a:hover {
+    background: var(--sakura-deep);
+    color: white;
+  }
+  html { scroll-behavior: smooth; }
+  .anchor-offset {
+    display: block;
+    position: relative;
+    top: -20px;
+    visibility: hidden;
+  }
+
   main {
     max-width: 900px;
     margin: 0 auto;
@@ -373,6 +431,20 @@
   <div class="banner-note">
     ✨ This page has your real trip details and updates any time — bookmark it! Grab a PDF copy before you fly so you have it on the plane and while you're in Japan without wifi.
   </div>
+
+  <nav class="trip-menu">
+    <div class="menu-title">Follow the Instructions for the following</div>
+    <p class="menu-line">Scroll down for <strong>itinerary, hotels, contacts, what's included / what's not included</strong>, and <strong>city by city</strong>.</p>
+    <p class="menu-line">Click here for city sights and attractions:</p>
+    <div class="menu-links">
+      <a href="#city-tokyo">🗼 Tokyo</a>
+      <a href="#city-fuji">🗻 Mt. Fuji</a>
+      <a href="#city-shizuoka">🏞️ Shizuoka/Aichi</a>
+      <a href="#city-kyoto">⛩️ Kyoto</a>
+      <a href="#city-nara">🦌 Nara</a>
+      <a href="#city-osaka">🏯 Osaka</a>
+    </div>
+  </nav>
 </header>
 
 <main>
@@ -431,6 +503,7 @@
       <div class="sticker-list">🧳 ✈️ 🎧 😴</div>
     </div>
 
+    <span id="city-tokyo" class="anchor-offset"></span>
     <div class="day-card">
       <div class="day-header">
         <span class="day-badge">DAY 2</span>
@@ -470,12 +543,14 @@
       <div class="sticker-list">🐟 🤖 ⛩️ 🍡</div>
     </div>
 
+    <span id="city-fuji" class="anchor-offset"></span>
     <div class="day-card">
       <div class="day-header">
         <span class="day-badge">DAY 5</span>
         <span class="day-date">Tue, Oct 13</span>
       </div>
       <span class="corner-sticker tl">🗻</span><span class="corner-sticker br">🏞️</span>
+      <span id="city-shizuoka" class="anchor-offset"></span>
       <div class="day-city">🗻 Tokyo → Mt. Fuji → Shizuoka/Aichi</div>
       <div class="day-title">Mt. Fuji, Lake Kawaguchi & Oshino Hakkai</div>
       <div class="day-desc">Check out of the hotel and board the tour bus for a full day of sightseeing at the UNESCO World Heritage Mt. Fuji area. Visit Lake Kawaguchi, a crater lake formed by a volcanic eruption nearly 3,000 years ago with postcard views of Mt. Fuji. Then Oshino Hakkai ("Eight Seas of Oshino") — eight spring-fed ponds, part of the Mt. Fuji UNESCO World Cultural Heritage site. Drive to Shizuoka/Aichi for the night.</div>
@@ -490,6 +565,7 @@
         <span class="day-date">Wed, Oct 14</span>
       </div>
       <span class="corner-sticker tl">🚄</span><span class="corner-sticker br">🦊</span>
+      <span id="city-kyoto" class="anchor-offset"></span>
       <div class="day-city">⛩️ Shizuoka/Aichi → Kyoto</div>
       <div class="day-title">Travel to Kyoto & Fushimi Inari Shrine</div>
       <div class="day-desc">Depart Shizuoka/Aichi for Kyoto, Japan's cultural and artistic center and the country's capital for over 1,000 years. Visit the iconic Fushimi Inari Shrine, renowned for its thousands of vermilion torii gates. The rest of the day is yours to explore Kyoto at your leisure.</div>
@@ -530,6 +606,8 @@
         <span class="day-date">Sat, Oct 17</span>
       </div>
       <span class="corner-sticker tl">🦌</span><span class="corner-sticker br">🏯</span>
+      <span id="city-nara" class="anchor-offset"></span>
+      <span id="city-osaka" class="anchor-offset"></span>
       <div class="day-city">🦌 Kyoto → Nara → 🏯 Osaka</div>
       <div class="day-title">Todaiji in Nara Deer Park, Dotonbori & Osaka Castle</div>
       <div class="day-desc">Visit Tōdaiji in Nara Deer Park, the "Great Eastern Temple" and one of Japan's most historically significant temples. Then on to Osaka — first stop Dotonbori, a vibrant commercial street since the Edo Period, with free time for lunch and shopping. Finally, visit Osaka Castle. Overnight stay near KIX Airport.</div>
