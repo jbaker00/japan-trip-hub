@@ -7,430 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --jr: #bc002d;       /* Japan flag red */
-    --jw: #ffffff;
-    --cream: #fff8f2;
-    --sakura: #ffd6e0;
-    --sakura-deep: #ff9fb3;
-    --ink: #2b2b2b;
-    --gold: #d4af37;
-  }
-  * { box-sizing: border-box; }
-  strong, b, .day-title, .day-badge, .day-city, header h1, .section-title, .footer-cta h3, .day-date, .btn, .card-title {
-    font-family: 'M PLUS Rounded 1c', 'Kosugi Maru', 'Helvetica Neue', Arial, sans-serif;
-  }
-  body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    background-image:
-      radial-gradient(circle at 10% 20%, var(--sakura) 0%, transparent 12%),
-      radial-gradient(circle at 90% 15%, var(--sakura) 0%, transparent 10%),
-      radial-gradient(circle at 80% 80%, var(--sakura) 0%, transparent 12%),
-      radial-gradient(circle at 15% 85%, var(--sakura) 0%, transparent 10%);
-    background-attachment: fixed;
-  }
-
-  header {
-    text-align: center;
-    padding: 60px 20px 40px;
-    background: linear-gradient(180deg, var(--jw) 0%, var(--cream) 100%);
-    border-bottom: 6px solid var(--jr);
-    position: relative;
-    overflow: hidden;
-  }
-  .flag-circle {
-    width: 90px;
-    height: 90px;
-    background: var(--jr);
-    border-radius: 50%;
-    margin: 0 auto 18px;
-    box-shadow: 0 6px 18px rgba(188,0,45,0.35);
-  }
-  header h1 {
-    font-size: clamp(26px, 5vw, 44px);
-    margin: 0 0 6px;
-    letter-spacing: 0.5px;
-    color: var(--jr);
-  }
-  header .sub {
-    font-size: 18px;
-    color: var(--ink);
-    opacity: 0.8;
-    margin-bottom: 4px;
-  }
-  header .birthday-sub {
-    font-size: 15px;
-    color: #a3436b;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
-  header .dates {
-    display: inline-block;
-    margin-top: 14px;
-    padding: 8px 22px;
-    background: var(--jr);
-    color: white;
-    border-radius: 999px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    font-size: 15px;
-  }
-  .stickers-row {
-    margin-top: 22px;
-    font-size: 34px;
-    letter-spacing: 14px;
-  }
-
-  .page-sticker {
-    position: fixed;
-    font-size: 40px;
-    opacity: 0.14;
-    z-index: 0;
-    pointer-events: none;
-    filter: grayscale(0.1);
-  }
-  .page-sticker.corner-tl { top: 18px; left: 18px; transform: rotate(-15deg); }
-  .page-sticker.corner-tr { top: 18px; right: 18px; transform: rotate(15deg); }
-  .page-sticker.corner-bl { bottom: 18px; left: 18px; transform: rotate(12deg); }
-  .page-sticker.corner-br { bottom: 18px; right: 18px; transform: rotate(-10deg); }
-  @media (max-width: 640px) {
-    .page-sticker { font-size: 26px; opacity: 0.12; }
-  }
-
-  .banner-note {
-    max-width: 700px;
-    margin: 24px auto 0;
-    background: #fff3f5;
-    border: 2px dashed var(--sakura-deep);
-    border-radius: 14px;
-    padding: 14px 20px;
-    font-size: 14px;
-    text-align: center;
-    color: #7a1f2b;
-  }
-
-  .trip-menu {
-    max-width: 700px;
-    margin: 22px auto 0;
-    background: white;
-    border-radius: 18px;
-    padding: 22px 26px 30px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    text-align: center;
-  }
-  .trip-menu .menu-title {
-    font-family: 'M PLUS Rounded 1c', 'Kosugi Maru', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    color: var(--jr);
-    margin-bottom: 12px;
-  }
-  .trip-menu .menu-line {
-    font-size: 14px;
-    color: #444;
-    margin: 6px 0;
-    line-height: 1.6;
-  }
-  .trip-menu .menu-line strong {
-    color: var(--ink);
-  }
-  .menu-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 12px;
-  }
-  .menu-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: var(--sakura);
-    color: #7a1f2b;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-family: 'M PLUS Rounded 1c', 'Kosugi Maru', sans-serif;
-    transition: background 0.15s ease;
-  }
-  .menu-links a:hover {
-    background: var(--sakura-deep);
-    color: white;
-  }
-  .menu-links.tabs {
-    gap: 8px;
-  }
-  .menu-links.tabs a {
-    background: var(--cream);
-    color: #7a1f2b;
-    border-radius: 10px 10px 0 0;
-    padding: 10px 20px;
-    border: 2px solid var(--sakura);
-    border-bottom: none;
-    font-size: 14px;
-  }
-  .menu-links.tabs a:hover {
-    background: var(--jr);
-    color: white;
-    border-color: var(--jr);
-  }
-  html { scroll-behavior: smooth; }
-  .anchor-offset {
-    display: block;
-    position: relative;
-    top: -20px;
-    visibility: hidden;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 50px 20px 80px;
-    position: relative;
-    z-index: 1;
-  }
-
-  header, footer.site-footer { position: relative; z-index: 1; }
-
-  .section-title {
-    text-align: center;
-    font-size: 26px;
-    color: var(--jr);
-    margin-bottom: 8px;
-  }
-  .section-sub {
-    text-align: center;
-    font-size: 15px;
-    opacity: 0.7;
-    margin-bottom: 40px;
-  }
-
-  /* Info cards (contacts, hotels, included/not included) */
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin-bottom: 50px;
-  }
-  @media (max-width: 640px) {
-    .info-grid { grid-template-columns: 1fr; }
-  }
-  .info-card {
-    background: white;
-    border-radius: 18px;
-    padding: 20px 22px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  }
-  .card-title {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--jr);
-    margin: 0 0 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .info-card p, .info-card li {
-    font-size: 13.5px;
-    line-height: 1.6;
-    color: #444;
-    margin: 0 0 4px;
-  }
-  .info-card ul {
-    margin: 0;
-    padding-left: 18px;
-  }
-  .info-card a { color: var(--jr); text-decoration: none; font-weight: 600; }
-
-  .timeline {
-    position: relative;
-    padding-left: 30px;
-    border-left: 4px dotted var(--sakura-deep);
-  }
-
-  .day-card {
-    background: white;
-    border-radius: 18px;
-    padding: 20px 24px;
-    margin-bottom: 22px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    position: relative;
-    transition: transform 0.15s ease;
-    overflow: hidden;
-  }
-  .day-card:hover { transform: translateY(-2px); }
-  .day-card::before {
-    content: '';
-    position: absolute;
-    left: -38px;
-    top: 26px;
-    width: 16px;
-    height: 16px;
-    background: var(--jr);
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px var(--sakura-deep);
-  }
-  .day-card.birthday::before {
-    background: var(--gold);
-    box-shadow: 0 0 0 3px #ffe9a8;
-  }
-
-  .corner-sticker {
-    position: absolute;
-    font-size: 26px;
-    opacity: 0.35;
-    pointer-events: none;
-    filter: grayscale(0.15);
-  }
-  .corner-sticker.tl { top: 8px; left: 12px; transform: rotate(-12deg); }
-  .corner-sticker.br { bottom: 8px; right: 12px; transform: rotate(10deg); }
-
-  .day-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .day-badge {
-    background: var(--jr);
-    color: white;
-    font-weight: 700;
-    font-size: 13px;
-    padding: 4px 12px;
-    border-radius: 999px;
-  }
-  .day-date {
-    font-size: 13px;
-    opacity: 0.6;
-    font-weight: 600;
-  }
-  .day-title {
-    font-size: 19px;
-    font-weight: 700;
-    margin: 4px 0 8px;
-    color: var(--ink);
-  }
-  .day-city {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--sakura);
-    color: #7a1f2b;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 3px 12px;
-    border-radius: 999px;
-    margin-bottom: 10px;
-  }
-  .day-desc {
-    font-size: 14.5px;
-    line-height: 1.6;
-    color: #444;
-    margin: 8px 0;
-  }
-  .meal-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #8a5a00;
-    background: #fff6df;
-    padding: 3px 10px;
-    border-radius: 999px;
-    margin-right: 6px;
-    margin-top: 4px;
-  }
-  .hotel-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12.5px;
-    font-weight: 700;
-    color: #4a3b8a;
-    background: #ede9ff;
-    padding: 4px 10px;
-    border-radius: 999px;
-    margin-top: 8px;
-  }
-  .birthday-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12.5px;
-    font-weight: 800;
-    color: #8a5a00;
-    background: #fff1c2;
-    padding: 4px 12px;
-    border-radius: 999px;
-    margin-top: 8px;
-    border: 1px solid #f0d27a;
-  }
-  .sticker-list {
-    font-size: 22px;
-    letter-spacing: 8px;
-    margin-top: 6px;
-  }
-
-  .footer-cta {
-    text-align: center;
-    margin-top: 60px;
-    padding: 30px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  }
-  .footer-cta h3 {
-    color: var(--jr);
-    margin-top: 0;
-  }
-  .btn-row {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 16px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 12px 26px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-  }
-  .btn-primary {
-    background: var(--jr);
-    color: white;
-  }
-  .btn-secondary {
-    background: var(--sakura);
-    color: #7a1f2b;
-  }
-
-  footer.site-footer {
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 13px;
-    opacity: 0.6;
-  }
-
-  @media print {
-    body { background: white; }
-    .banner-note, .footer-cta { display: none; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -439,266 +16,79 @@
 <span class="page-sticker corner-bl">🎎</span>
 <span class="page-sticker corner-br">🎏</span>
 
-<header>
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="nav-logo">🌸 Japan Trip</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="forms.html">Forms</a>
+      <a href="maps.html">Maps</a>
+      <a href="dress-code.html">Dress Code</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="insurance.html">Travel Protection/Insurance</a>
+      <a href="reminder.html">Reminder</a>
+    </div>
+  </div>
+</nav>
+
+<header class="home-header">
   <div class="flag-circle"></div>
   <h1>Japan Fall Trip 2026</h1>
   <div class="sub">Tokyo · Mt. Fuji · Kyoto · Nara · Osaka</div>
   <div class="dates">October 9 – 18, 2026</div>
   <div class="stickers-row">🌸 ⛩️ 🗻 🚄 🍜</div>
   <div class="banner-note">
-    ✨ This page has your real trip details and updates any time — bookmark it! Grab a PDF copy before you fly so you have it on the plane and while you're in Japan without wifi.
+    ✨ This site has your real trip details and updates any time — bookmark it! Use the tabs above to jump around, or grab a PDF copy on the Reminder tab before you fly so you have it without wifi.
   </div>
-
-  <nav class="trip-menu">
-    <div class="menu-title">Attractions</div>
-    <div class="menu-links tabs">
-      <a href="#city-tokyo">🗼 Tokyo</a>
-      <a href="#city-fuji">🗻 Mt Fuji</a>
-      <a href="#city-kyoto">⛩️ Kyoto</a>
-      <a href="#city-nara">🦌 Nara</a>
-      <a href="#city-osaka">🏯 Osaka</a>
-    </div>
-  </nav>
 </header>
 
 <main>
 
-  <div class="info-grid">
+  <div class="section-title">Where to Go</div>
+  <div class="section-sub">Use the tabs above, or tap a card below</div>
+
+  <div class="info-grid" style="grid-template-columns: repeat(3, 1fr);">
+    <a href="itinerary.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">🗺️ Itinerary</div>
+      <p>Full day-by-day schedule, hotels, and city sights.</p>
+    </a>
+    <a href="forms.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">📋 Forms</div>
+      <p>Intake form, passport copy, deposits, and payment steps.</p>
+    </a>
+    <a href="maps.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">🗾 Maps</div>
+      <p>City maps and key locations for the trip.</p>
+    </a>
+    <a href="dress-code.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">👘 Dress Code</div>
+      <p>What to pack and wear for temples, weather, and dinners.</p>
+    </a>
+    <a href="faqs.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">❓ FAQs</div>
+      <p>Common questions about the trip, answered.</p>
+    </a>
+    <a href="gallery.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">📸 Gallery</div>
+      <p>Photos from the trip — before, during, and after.</p>
+    </a>
+    <a href="insurance.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">🛡️ Travel Protection/Insurance</div>
+      <p>Coverage options and what to know before you go.</p>
+    </a>
+    <a href="reminder.html" class="info-card" style="text-decoration:none; color:inherit;">
+      <div class="card-title">⏰ Reminder</div>
+      <p>Save this site offline before your flight — here's how.</p>
+    </a>
     <div class="info-card">
       <div class="card-title">📞 Contacts</div>
-      <p><strong>Urie</strong><br>1-856-649-3499<br>ainsleyborabora@yahoo.com</p>
-      <p><strong>Travel Advisor: Chantale Baker</strong><br>Global Vibes Travel<br>1-201-532-8712<br><a href="mailto:Info@globalvibestravel.com">Info@globalvibestravel.com</a></p>
-    </div>
-    <div class="info-card">
-      <div class="card-title">🏨 Hotels</div>
-      <ul>
-        <li><strong>Tokyo (3 nights):</strong> Sunshine City Prince Hotel or similar</li>
-        <li><strong>Shizuoka (1 night):</strong> Crown Palaise Hamamatsu or Loisir Hotel Toyohashi</li>
-        <li><strong>Kyoto (3 nights):</strong> Hotel Keihan Hachijoguchi or Loisir Kyoto Hotel Toji</li>
-        <li><strong>Osaka/KIX (1 night):</strong> Star Gate Kansai Airport Hotel or similar</li>
-      </ul>
-    </div>
-    <div class="info-card">
-      <div class="card-title">✅ Included</div>
-      <ul>
-        <li>Round trip international air</li>
-        <li>Ground transportation per itinerary</li>
-        <li>Hotels as shown on itinerary</li>
-        <li>Entrance fees on itinerary</li>
-        <li>Meals as noted on itinerary</li>
-        <li>English-speaking tour guide</li>
-      </ul>
-    </div>
-    <div class="info-card">
-      <div class="card-title">📝 Not Included</div>
-      <ul>
-        <li>Personal expenditure</li>
-        <li>Gratuity: suggested $8–10/person/day</li>
-        <li>Visa fee (US citizens don't need a visa for Japan)</li>
-        <li>Travel insurance (highly recommended — info due ~30 days before departure)</li>
-      </ul>
+      <p><strong>Urie</strong>: 1-856-649-3499<br><strong>Travel Advisor:</strong> Chantale Baker, Global Vibes Travel</p>
     </div>
   </div>
 
-  <div class="section-title">Day by Day, City by City</div>
-  <div class="section-sub">Tokyo 🗼 → Mt. Fuji 🗻 → Shizuoka/Aichi → Kyoto ⛩️ → Nara 🦌 → Osaka 🏯</div>
-
-  <div class="timeline">
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 1</span>
-        <span class="day-date">Fri, Oct 9</span>
-      </div>
-      <span class="corner-sticker tl">🧳</span><span class="corner-sticker br">✈️</span>
-      <div class="day-city">✈️ In Transit</div>
-      <div class="day-title">Depart for Tokyo</div>
-      <div class="day-desc">Board an international flight bound for Tokyo (HND or NRT) and begin our Asia vacation. We'll spend the night aboard as our flight crosses the International Date Line.</div>
-      <div class="sticker-list">🧳 ✈️ 🎧 😴</div>
-    </div>
-
-    <span id="city-tokyo" class="anchor-offset"></span>
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 2</span>
-        <span class="day-date">Sat, Oct 10</span>
-      </div>
-      <span class="corner-sticker tl">🛬</span><span class="corner-sticker br">🌸</span>
-      <div class="day-city">🗼 Tokyo</div>
-      <div class="day-title">Arrive Tokyo</div>
-      <div class="day-desc">Konnichiwa! Welcome to Japan! Upon arrival at Narita or Haneda Airport, our tour representative will greet you and help arrange transportation via bus or train to the hotel for check-in.</div>
-      <div class="sticker-list">🛬 🏨 🍜 🎉</div>
-      <div class="hotel-tag">🏨 Sunshine City Prince Hotel, Tokyo (or similar)</div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 3</span>
-        <span class="day-date">Sun, Oct 11</span>
-      </div>
-      <span class="corner-sticker tl">🏮</span><span class="corner-sticker br">⛩️</span>
-      <div class="day-city">🗼 Tokyo</div>
-      <div class="day-title">Meiji Shrine, Tokyo Tower & Ginza</div>
-      <div class="day-desc">Full day tour of Tokyo, home to over 11 million people. Visit Meiji Shrine, a key Shinto site dedicated to the Imperial Family in 1926 and one of Tokyo's most popular shrines. Then see Tokyo Tower (332.9m, built in 1958, the second-tallest structure in Japan). In the afternoon, explore Ginza — Tokyo's most famous upmarket shopping, dining, and entertainment district.</div>
-      <span class="meal-tag">🍳 Breakfast</span><span class="meal-tag">🍱 Lunch</span>
-      <div class="sticker-list">⛩️ 🗼 🛍️ 📸</div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 4</span>
-        <span class="day-date">Mon, Oct 12</span>
-      </div>
-      <span class="corner-sticker tl">🐟</span><span class="corner-sticker br">🤖</span>
-      <div class="day-city">🗼 Tokyo</div>
-      <div class="day-title">Tsukiji Market, Odaiba & Sensoji Temple</div>
-      <div class="day-desc">Start at Tsukiji Outer Market — fresh seafood, local delicacies, and authentic street food. Then explore futuristic Odaiba, home to the life-sized Gundam statue. Finally, step back in time at Asakusa's Sensoji Temple, Tokyo's oldest and most iconic temple, and stroll Nakamise Street's traditional shops.</div>
-      <span class="meal-tag">🍳 Breakfast</span>
-      <div class="sticker-list">🐟 🤖 ⛩️ 🍡</div>
-    </div>
-
-    <span id="city-fuji" class="anchor-offset"></span>
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 5</span>
-        <span class="day-date">Tue, Oct 13</span>
-      </div>
-      <span class="corner-sticker tl">🗻</span><span class="corner-sticker br">🏞️</span>
-      <span id="city-shizuoka" class="anchor-offset"></span>
-      <div class="day-city">🗻 Tokyo → Mt. Fuji → Shizuoka/Aichi</div>
-      <div class="day-title">Mt. Fuji, Lake Kawaguchi & Oshino Hakkai</div>
-      <div class="day-desc">Check out of the hotel and board the tour bus for a full day of sightseeing at the UNESCO World Heritage Mt. Fuji area. Visit Lake Kawaguchi, a crater lake formed by a volcanic eruption nearly 3,000 years ago with postcard views of Mt. Fuji. Then Oshino Hakkai ("Eight Seas of Oshino") — eight spring-fed ponds, part of the Mt. Fuji UNESCO World Cultural Heritage site. Drive to Shizuoka/Aichi for the night.</div>
-      <span class="meal-tag">🍳 Breakfast</span><span class="meal-tag">🍽️ Dinner</span>
-      <div class="sticker-list">🗻 🏞️ 🚌 🍶</div>
-      <div class="hotel-tag">🏨 Crown Palaise Hamamatsu or Loisir Hotel Toyohashi</div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 6</span>
-        <span class="day-date">Wed, Oct 14</span>
-      </div>
-      <span class="corner-sticker tl">🚄</span><span class="corner-sticker br">🦊</span>
-      <span id="city-kyoto" class="anchor-offset"></span>
-      <div class="day-city">⛩️ Shizuoka/Aichi → Kyoto</div>
-      <div class="day-title">Travel to Kyoto & Fushimi Inari Shrine</div>
-      <div class="day-desc">Depart Shizuoka/Aichi for Kyoto, Japan's cultural and artistic center and the country's capital for over 1,000 years. Visit the iconic Fushimi Inari Shrine, renowned for its thousands of vermilion torii gates. The rest of the day is yours to explore Kyoto at your leisure.</div>
-      <span class="meal-tag">🍳 Breakfast</span>
-      <div class="sticker-list">⛩️ 🦊 🌿 🧧</div>
-      <div class="hotel-tag">🏨 Hotel Keihan Hachijoguchi or Loisir Kyoto Hotel Toji</div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 7</span>
-        <span class="day-date">Thu, Oct 15</span>
-      </div>
-      <span class="corner-sticker tl">🎍</span><span class="corner-sticker br">🙏</span>
-      <div class="day-city">⛩️ Kyoto</div>
-      <div class="day-title">Kinkaku-ji, Arashiyama Bamboo Forest & Sanjusangendo</div>
-      <div class="day-desc">In-depth exploration of Kyoto's most iconic landmarks: the golden splendor of Kinkaku-ji Temple, the serene Arashiyama Bamboo Forest, and the awe-inspiring Sanjusangendo — home to 1,001 intricately crafted statues of Kannon, the Goddess of Mercy.</div>
-      <span class="meal-tag">🍳 Breakfast</span><span class="meal-tag">🍱 Lunch</span>
-      <div class="sticker-list">🎍 🎋 🙏 📿</div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 8</span>
-        <span class="day-date">Fri, Oct 16</span>
-      </div>
-      <span class="corner-sticker tl">☕</span><span class="corner-sticker br">🎏</span>
-      <div class="day-city">⛩️ Kyoto</div>
-      <div class="day-title">Free Day in Kyoto</div>
-      <div class="day-desc">A free day to explore Kyoto at your own pace — revisit a favorite spot, wander a neighborhood you haven't seen yet, or just relax before heading to Osaka.</div>
-      <span class="meal-tag">🍳 Breakfast</span>
-      <div class="sticker-list">☕ 🎏 🗺️ 🛍️</div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 9</span>
-        <span class="day-date">Sat, Oct 17</span>
-      </div>
-      <span class="corner-sticker tl">🦌</span><span class="corner-sticker br">🏯</span>
-      <span id="city-nara" class="anchor-offset"></span>
-      <span id="city-osaka" class="anchor-offset"></span>
-      <div class="day-city">🦌 Kyoto → Nara → 🏯 Osaka</div>
-      <div class="day-title">Todaiji in Nara Deer Park, Dotonbori & Osaka Castle</div>
-      <div class="day-desc">Visit Tōdaiji in Nara Deer Park, the "Great Eastern Temple" and one of Japan's most historically significant temples. Then on to Osaka — first stop Dotonbori, a vibrant commercial street since the Edo Period, with free time for lunch and shopping. Finally, visit Osaka Castle. Overnight stay near KIX Airport.</div>
-      <span class="meal-tag">🍳 Breakfast</span>
-      <div class="sticker-list">🦌 🏯 🐙 🎆</div>
-      <div class="hotel-tag">🏨 Star Gate Kansai Airport Hotel (or similar)</div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-header">
-        <span class="day-badge">DAY 10</span>
-        <span class="day-date">Sun, Oct 18</span>
-      </div>
-      <span class="corner-sticker tl">🧳</span><span class="corner-sticker br">💕</span>
-      <div class="day-city">🛫 Osaka (KIX) Departure</div>
-      <div class="day-title">Sayonara, Japan!</div>
-      <div class="day-desc">Make your own way to Osaka Kansai International Airport (KIX) — a local train (one stop, ~5 min) or taxi (~10 min) both work. Reach out to your tour rep for any assistance. Head home with a suitcase full of memories!</div>
-      <span class="meal-tag">🍳 Breakfast</span>
-      <div class="sticker-list">🧳 🛫 💕 🌸</div>
-    </div>
-
-  </div>
-
-  <div class="info-grid" style="margin-top: 10px;">
-    <div class="info-card">
-      <div class="card-title">🛡️ Trip Insurance</div>
-      <p>Check with your healthcare provider and credit card company for existing coverage. Comprehensive trip insurance typically runs 10–15% of trip cost. Compare plans at InsureMyTrip, Travelex, Travel Corners, BHTP, or Travel Guard — or contact Chantale directly.</p>
-    </div>
-    <div class="info-card">
-      <div class="card-title">📋 Reservation Checklist</div>
-      <ul>
-        <li>Intake form</li>
-        <li>Passport copy (first page)</li>
-        <li>Initial deposit</li>
-        <li>Final payment (due 90 days before departure)</li>
-      </ul>
-      <p style="margin-top:8px; opacity:0.75;">All deposits and final balances are non-refundable and non-transferable.</p>
-    </div>
-  </div>
-
-  <div class="footer-cta">
-    <h3>Save This For Offline Access</h3>
-    <p style="opacity:0.75; font-size:14px;">This page updates any time with new details — no new link needed. Grab a copy below so you have it on the plane and while you're in Japan without wifi.</p>
-    <div class="btn-row">
-      <button class="btn btn-primary" onclick="window.print()">🖨️ Print This Page</button>
-      <button class="btn btn-primary" id="downloadPdfBtn">⬇️ Download as PDF</button>
-      <a class="btn btn-secondary" id="emailBtn" href="#">📧 Email This Itinerary to Myself</a>
-    </div>
-    <p style="opacity:0.55; font-size:12px; margin-top:14px;">Tip: on "Print," choose <strong>"Save as PDF"</strong> as the destination (works the same on iPhone and Android) to keep an offline copy on your phone.</p>
-  </div>
 </main>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-  document.getElementById('downloadPdfBtn').addEventListener('click', function() {
-    var el = document.querySelector('main');
-    var opt = {
-      margin: 0.3,
-      filename: 'Japan-Trip-Itinerary-GlobalVibesTravel.pdf',
-      image: { type: 'jpeg', quality: 0.95 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(el).save();
-  });
-
-  document.getElementById('emailBtn').addEventListener('click', function(e) {
-    e.preventDefault();
-    var subject = encodeURIComponent('Our Japan Trip Itinerary (Oct 9–18) — Global Vibes Travel');
-    var body = encodeURIComponent(
-      'Hi!\n\nHere is the link to our Japan group trip itinerary — bookmark it, since it updates anytime with new details:\n\n' +
-      window.location.href +
-      '\n\nTip: open this link and tap Print > Save as PDF to keep an offline copy on your phone for the flight and for when you don\'t have wifi in Japan.\n\n🌸 Global Vibes Travel'
-    );
-    window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
-  });
-</script>
 
 <footer class="site-footer">
   Made with 🌸 for our Global Vibes Travel group
