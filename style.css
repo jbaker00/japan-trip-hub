@@ -1,16 +1,16 @@
 /* Import romantic fonts */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&display=swap');
 
-/* Color palette based on reference wedding site */
+/* Color palette - Urban Japan city vibes: reds, cool grays, primary colors */
 :root {
-  --jr: #e89a9a;               /* primary deep pink accent */
+  --jr: #cc2936;               /* vibrant red primary accent */
   --jw: #ffffff;               /* white */
-  --cream: #fdeef0;            /* soft blush background */
-  --sakura: #ffd9e3;           /* light blush for hover */
-  --sakura-deep: #ef9a9a;      /* slightly deeper pink for borders */
-  --ink: #7a5a5f;              /* dusty rose text */
-  --gold: #d4af37;             /* retain if needed */
-  --green-leaf: #a8c48f;       /* leaf accent */
+  --cream: #f5f5f5;            /* light gray background */
+  --sakura: #ff3d47;           /* bright red for hover */
+  --sakura-deep: #a01e28;      /* deep red for borders */
+  --ink: #2c2c2c;              /* dark gray text */
+  --gold: #ff6b35;             /* orange accent */
+  --green-leaf: #1b4965;       /* teal accent */
 }
 * { box-sizing: border-box; }
 /* Typography: use Cinzel for navigation and UI labels, Great Vibes for primary headings */
@@ -242,11 +242,11 @@ header.home-header .dates {
   text-shadow: 0 2px 6px rgba(0,0,0,0.4);
   font-family: 'Cinzel', 'Helvetica Neue', Arial, sans-serif;
 }
-.photo-tokyo   { background: linear-gradient(150deg, #ff9a9e 0%, #fecfef 60%, #fbc2eb 100%); }
-.photo-fuji    { background: linear-gradient(150deg, #a1c4fd 0%, #c2e9fb 60%, #eef1ff 100%); }
-.photo-kyoto   { background: linear-gradient(150deg, #f6d365 0%, #fda085 60%, #f6a1a5 100%); }
-.photo-nara    { background: linear-gradient(150deg, #a8e6cf 0%, #dcedc1 60%, #ffd3b6 100%); }
-.photo-osaka   { background: linear-gradient(150deg, #ff758c 0%, #ff7eb3 60%, #ffb199 100%); }
+.photo-tokyo   { background: linear-gradient(150deg, #ff6b35 0%, #cc2936 60%, #2c2c2c 100%); }
+.photo-fuji    { background: linear-gradient(150deg, #1b4965 0%, #4a7c9e 60%, #7399b8 100%); }
+.photo-kyoto   { background: linear-gradient(150deg, #ff3d47 0%, #cc2936 60%, #a01e28 100%); }
+.photo-nara    { background: linear-gradient(150deg, #00a86b 0%, #2d9e5a 60%, #1b5e3d 100%); }
+.photo-osaka   { background: linear-gradient(150deg, #ff6b35 0%, #ff3d47 60%, #cc2936 100%); }
 .photo-note {
   text-align: center;
   font-size: 13px;
