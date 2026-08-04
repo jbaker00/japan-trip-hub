@@ -1,16 +1,16 @@
 /* Import romantic fonts */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&display=swap');
 
-/* Color palette - Urban Japan city vibes: reds, cool grays, primary colors */
+/* Color palette - Urban Japan city vibes: cool blues, teals, modern city */
 :root {
-  --jr: #cc2936;               /* vibrant red primary accent */
+  --jr: #0052CC;               /* modern bright blue primary */
   --jw: #ffffff;               /* white */
-  --cream: #f5f5f5;            /* light gray background */
-  --sakura: #ff3d47;           /* bright red for hover */
-  --sakura-deep: #a01e28;      /* deep red for borders */
-  --ink: #2c2c2c;              /* dark gray text */
-  --gold: #ff6b35;             /* orange accent */
-  --green-leaf: #1b4965;       /* teal accent */
+  --cream: #f0f6f8;            /* light blue-gray background */
+  --sakura: #0077E6;           /* bright blue for hover */
+  --sakura-deep: #003d99;      /* deep blue for borders */
+  --ink: #1a1a1a;              /* dark gray text */
+  --gold: #00b8d4;             /* teal accent */
+  --green-leaf: #1b5f7a;       /* dark teal accent */
 }
 * { box-sizing: border-box; }
 /* Typography: use Cinzel for navigation and UI labels, Great Vibes for primary headings */
@@ -153,9 +153,7 @@ header.home-header .dates {
   font-size: 15px;
 }
 .stickers-row {
-  margin-top: 22px;
-  font-size: 34px;
-  letter-spacing: 14px;
+  display: none;
 }
 
 .page-sticker {
@@ -221,10 +219,7 @@ header.home-header .dates {
   background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
 }
 .photo-emoji {
-  font-size: clamp(28px, 5vw, 44px);
-  letter-spacing: 4px;
-  z-index: 1;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+  display: none;
 }
 .photo-label {
   position: absolute;
@@ -234,17 +229,20 @@ header.home-header .dates {
   text-align: center;
   color: white;
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.5px;
+  font-size: 18px;
+  letter-spacing: 1px;
   z-index: 2;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
   font-family: 'Cinzel', 'Helvetica Neue', Arial, sans-serif;
+  background: rgba(0,0,0,0.3);
+  padding: 12px 0;
+  backdrop-filter: blur(2px);
 }
-.photo-tokyo   { background: linear-gradient(150deg, #ff6b35 0%, #cc2936 60%, #2c2c2c 100%); }
-.photo-fuji    { background: linear-gradient(150deg, #1b4965 0%, #4a7c9e 60%, #7399b8 100%); }
-.photo-kyoto   { background: linear-gradient(150deg, #ff3d47 0%, #cc2936 60%, #a01e28 100%); }
-.photo-nara    { background: linear-gradient(150deg, #00a86b 0%, #2d9e5a 60%, #1b5e3d 100%); }
-.photo-osaka   { background: linear-gradient(150deg, #ff6b35 0%, #ff3d47 60%, #cc2936 100%); }
+.photo-tokyo   { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23003d99;stop-opacity:1" /><stop offset="100%" style="stop-color:%231a1a1a;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g1)"/><rect x="50" y="120" width="30" height="180" fill="%23f5b325"/><rect x="120" y="100" width="35" height="200" fill="%23f5b325" opacity="0.8"/><rect x="200" y="80" width="25" height="220" fill="%23f5b325" opacity="0.7"/></svg>'); background-size: cover; background-position: center; }
+.photo-fuji    { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%231b5f7a;stop-opacity:1" /><stop offset="100%" style="stop-color:%2300b8d4;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g2)"/><polygon points="200,20 80,280 320,280" fill="%23ffffff" opacity="0.9"/><polygon points="200,60 130,240 270,240" fill="%23f0f6f8"/></svg>'); background-size: cover; background-position: center; }
+.photo-kyoto   { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23003d99;stop-opacity:1" /><stop offset="100%" style="stop-color:%230052CC;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g3)"/><rect x="80" y="150" width="60" height="150" fill="%23d4a574"/><rect x="170" y="130" width="50" height="170" fill="%23c8945f"/><polygon points="100,150 130,80 160,150" fill="%232c2c2c" opacity="0.6"/></svg>'); background-size: cover; background-position: center; }
+.photo-nara    { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%2300b8d4;stop-opacity:1" /><stop offset="100%" style="stop-color:%231b5f7a;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g4)"/><circle cx="100" cy="150" r="25" fill="%23b8860b" opacity="0.7"/><circle cx="180" cy="140" r="20" fill="%23b8860b" opacity="0.6"/><circle cx="260" cy="160" r="28" fill="%23b8860b" opacity="0.7"/><circle cx="320" cy="145" r="22" fill="%23b8860b" opacity="0.6"/></svg>'); background-size: cover; background-position: center; }
+.photo-osaka   { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23003d99;stop-opacity:1" /><stop offset="100%" style="stop-color:%231a1a1a;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g5)"/><rect x="60" y="130" width="28" height="170" fill="%2300b8d4" opacity="0.8"/><rect x="130" y="110" width="32" height="190" fill="%2300b8d4" opacity="0.9"/><rect x="200" y="90" width="30" height="210" fill="%2300b8d4"/><rect x="270" y="125" width="26" height="175" fill="%2300b8d4" opacity="0.8"/></svg>'); background-size: cover; background-position: center; }
 .photo-note {
   text-align: center;
   font-size: 13px;
