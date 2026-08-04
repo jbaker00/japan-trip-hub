@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Japan Group Adventure | Oct 9–18 | Global Vibes Travel</title>
+<title>Japan Fall Trip | Oct 9–18, 2026 | Global Vibes Travel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     --gold: #d4af37;
   }
   * { box-sizing: border-box; }
-  strong, b, .day-title, .day-badge, .day-city, header h1, .section-title, .footer-cta h3, .day-date, .btn {
+  strong, b, .day-title, .day-badge, .day-city, header h1, .section-title, .footer-cta h3, .day-date, .btn, .card-title {
     font-family: 'M PLUS Rounded 1c', 'Kosugi Maru', 'Helvetica Neue', Arial, sans-serif;
   }
   body {
@@ -51,15 +51,21 @@
     box-shadow: 0 6px 18px rgba(188,0,45,0.35);
   }
   header h1 {
-    font-size: clamp(28px, 5vw, 48px);
+    font-size: clamp(26px, 5vw, 44px);
     margin: 0 0 6px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: var(--jr);
   }
   header .sub {
     font-size: 18px;
     color: var(--ink);
-    opacity: 0.75;
+    opacity: 0.8;
+    margin-bottom: 4px;
+  }
+  header .birthday-sub {
+    font-size: 15px;
+    color: #a3436b;
+    font-weight: 700;
     margin-bottom: 6px;
   }
   header .dates {
@@ -130,6 +136,43 @@
     margin-bottom: 40px;
   }
 
+  /* Info cards (contacts, hotels, included/not included) */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 50px;
+  }
+  @media (max-width: 640px) {
+    .info-grid { grid-template-columns: 1fr; }
+  }
+  .info-card {
+    background: white;
+    border-radius: 18px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--jr);
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .info-card p, .info-card li {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 4px;
+  }
+  .info-card ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .info-card a { color: var(--jr); text-decoration: none; font-weight: 600; }
+
   .timeline {
     position: relative;
     padding-left: 30px;
@@ -158,6 +201,10 @@
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 0 0 0 3px var(--sakura-deep);
+  }
+  .day-card.birthday::before {
+    background: var(--gold);
+    box-shadow: 0 0 0 3px #ffe9a8;
   }
 
   .corner-sticker {
@@ -215,22 +262,48 @@
     color: #444;
     margin: 8px 0;
   }
-  .sticker-list {
-    font-size: 22px;
-    letter-spacing: 8px;
-    margin-top: 6px;
+  .meal-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #8a5a00;
+    background: #fff6df;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-right: 6px;
+    margin-top: 4px;
   }
-  .train-note {
+  .hotel-tag {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     font-size: 12.5px;
     font-weight: 700;
-    color: #1a6b3c;
-    background: #e8f8ee;
+    color: #4a3b8a;
+    background: #ede9ff;
     padding: 4px 10px;
     border-radius: 999px;
     margin-top: 8px;
+  }
+  .birthday-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: #8a5a00;
+    background: #fff1c2;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-top: 8px;
+    border: 1px solid #f0d27a;
+  }
+  .sticker-list {
+    font-size: 22px;
+    letter-spacing: 8px;
+    margin-top: 6px;
   }
 
   .footer-cta {
@@ -289,22 +362,61 @@
 <span class="page-sticker corner-tl">🌸</span>
 <span class="page-sticker corner-tr">⛩️</span>
 <span class="page-sticker corner-bl">🎎</span>
-<span class="page-sticker corner-br">🎏</span>
+<span class="page-sticker corner-br">🎂</span>
 
 <header>
   <div class="flag-circle"></div>
-  <h1>Our Japan Adventure</h1>
-  <div class="sub">A Global Vibes Travel Group Journey</div>
-  <div class="dates">Depart Oct 9 &nbsp;•&nbsp; In Japan Oct 10 – 18</div>
-  <div class="stickers-row">🌸 ⛩️ 🗼 🚄 🍜</div>
+  <h1>Japan Fall Trip 2026</h1>
+  <div class="sub">Tokyo · Mt. Fuji · Kyoto · Nara · Osaka</div>
+  <div class="birthday-sub">🎂 Celebrating Bertine's 60th! 🎉</div>
+  <div class="dates">October 9 – 18, 2026</div>
+  <div class="stickers-row">🌸 ⛩️ 🗻 🚄 🎂</div>
   <div class="banner-note">
-    ✨ This is a <strong>sample itinerary</strong> to show the vibe of the trip! Real flights, hotels, and timing will be added here soon — check back anytime, this page updates live.
+    ✨ This page has your real trip details and updates any time — bookmark it! Grab a PDF copy before you fly so you have it on the plane and while you're in Japan without wifi.
   </div>
 </header>
 
 <main>
-  <div class="section-title">City by City, Day by Day</div>
-  <div class="section-sub">Hopping between cities by Shinkansen (bullet train) 🚄</div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="card-title">📞 Contacts</div>
+      <p><strong>Urie</strong><br>1-856-649-3499<br>ainsleyborabora@yahoo.com</p>
+      <p><strong>Travel Advisor: Chantale Baker</strong><br>Global Vibes Travel<br>1-201-532-8712<br><a href="mailto:Info@globalvibestravel.com">Info@globalvibestravel.com</a></p>
+    </div>
+    <div class="info-card">
+      <div class="card-title">🏨 Hotels</div>
+      <ul>
+        <li><strong>Tokyo (3 nights):</strong> Sunshine City Prince Hotel or similar</li>
+        <li><strong>Shizuoka (1 night):</strong> Crown Palaise Hamamatsu or Loisir Hotel Toyohashi</li>
+        <li><strong>Kyoto (3 nights):</strong> Hotel Keihan Hachijoguchi or Loisir Kyoto Hotel Toji</li>
+        <li><strong>Osaka/KIX (1 night):</strong> Star Gate Kansai Airport Hotel or similar</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <div class="card-title">✅ Included</div>
+      <ul>
+        <li>Round trip international air</li>
+        <li>Ground transportation per itinerary</li>
+        <li>Hotels as shown on itinerary</li>
+        <li>Entrance fees on itinerary</li>
+        <li>Meals as noted on itinerary</li>
+        <li>English-speaking tour guide</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <div class="card-title">📝 Not Included</div>
+      <ul>
+        <li>Personal expenditure</li>
+        <li>Gratuity: suggested $8–10/person/day</li>
+        <li>Visa fee (US citizens don't need a visa for Japan)</li>
+        <li>Travel insurance (highly recommended — info due ~30 days before departure)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">Day by Day, City by City</div>
+  <div class="section-sub">Tokyo 🗼 → Mt. Fuji 🗻 → Shizuoka/Aichi → Kyoto ⛩️ → Nara 🦌 → Osaka 🏯</div>
 
   <div class="timeline">
 
@@ -315,8 +427,8 @@
       </div>
       <span class="corner-sticker tl">🧳</span><span class="corner-sticker br">✈️</span>
       <div class="day-city">✈️ In Transit</div>
-      <div class="day-title">Depart Home & Fly to Japan</div>
-      <div class="day-desc">Say your goodbyes and head to the airport! We'll cross the International Date Line en route — buckle up, snack up, and get ready to land in Japan tomorrow.</div>
+      <div class="day-title">Depart for Tokyo</div>
+      <div class="day-desc">Board an international flight bound for Tokyo (HND or NRT) and begin our Asia vacation. We'll spend the night aboard as our flight crosses the International Date Line.</div>
       <div class="sticker-list">🧳 ✈️ 🎧 😴</div>
     </div>
 
@@ -327,9 +439,10 @@
       </div>
       <span class="corner-sticker tl">🛬</span><span class="corner-sticker br">🌸</span>
       <div class="day-city">🗼 Tokyo</div>
-      <div class="day-title">Arrival & Welcome Night</div>
-      <div class="day-desc">Land in Tokyo, settle into our hotel, and meet up for a welcome dinner with the group. First taste of ramen, first round of jet lag — the adventure begins!</div>
+      <div class="day-title">Arrive Tokyo</div>
+      <div class="day-desc">Konnichiwa! Welcome to Japan! Upon arrival at Narita or Haneda Airport, our tour representative will greet you and help arrange transportation via bus or train to the hotel for check-in.</div>
       <div class="sticker-list">🛬 🏨 🍜 🎉</div>
+      <div class="hotel-tag">🏨 Sunshine City Prince Hotel, Tokyo (or similar)</div>
     </div>
 
     <div class="day-card">
@@ -339,9 +452,10 @@
       </div>
       <span class="corner-sticker tl">🏮</span><span class="corner-sticker br">⛩️</span>
       <div class="day-city">🗼 Tokyo</div>
-      <div class="day-title">Shibuya, Asakusa & Senso-ji Temple</div>
-      <div class="day-desc">Cross the famous Shibuya Scramble, wander Asakusa's Nakamise shopping street, and visit Tokyo's oldest temple, Senso-ji. Evening free for izakaya hopping.</div>
-      <div class="sticker-list">⛩️ 🛍️ 🏮 📸</div>
+      <div class="day-title">Meiji Shrine, Tokyo Tower & Ginza</div>
+      <div class="day-desc">Full day tour of Tokyo, home to over 11 million people. Visit Meiji Shrine, a key Shinto site dedicated to the Imperial Family in 1926 and one of Tokyo's most popular shrines. Then see Tokyo Tower (332.9m, built in 1958, the second-tallest structure in Japan). In the afternoon, explore Ginza — Tokyo's most famous upmarket shopping, dining, and entertainment district.</div>
+      <span class="meal-tag">🍳 Breakfast</span><span class="meal-tag">🍱 Lunch</span>
+      <div class="sticker-list">⛩️ 🗼 🛍️ 📸</div>
     </div>
 
     <div class="day-card">
@@ -349,11 +463,12 @@
         <span class="day-badge">DAY 4</span>
         <span class="day-date">Mon, Oct 12</span>
       </div>
-      <span class="corner-sticker tl">🗼</span><span class="corner-sticker br">🍡</span>
+      <span class="corner-sticker tl">🐟</span><span class="corner-sticker br">🤖</span>
       <div class="day-city">🗼 Tokyo</div>
-      <div class="day-title">Tokyo Tower & Team Free Day</div>
-      <div class="day-desc">Sunset views from Tokyo Tower, then an open afternoon to explore Harajuku, Akihabara, or just relax before we head out of the city tomorrow.</div>
-      <div class="sticker-list">🗼 🌇 🎮 🍡</div>
+      <div class="day-title">Tsukiji Market, Odaiba & Sensoji Temple</div>
+      <div class="day-desc">Start at Tsukiji Outer Market — fresh seafood, local delicacies, and authentic street food. Then explore futuristic Odaiba, home to the life-sized Gundam statue. Finally, step back in time at Asakusa's Sensoji Temple, Tokyo's oldest and most iconic temple, and stroll Nakamise Street's traditional shops.</div>
+      <span class="meal-tag">🍳 Breakfast</span>
+      <div class="sticker-list">🐟 🤖 ⛩️ 🍡</div>
     </div>
 
     <div class="day-card">
@@ -361,12 +476,13 @@
         <span class="day-badge">DAY 5</span>
         <span class="day-date">Tue, Oct 13</span>
       </div>
-      <span class="corner-sticker tl">🚄</span><span class="corner-sticker br">🦊</span>
-      <div class="day-city">⛩️ Kyoto</div>
-      <div class="day-title">Shinkansen to Kyoto + Fushimi Inari</div>
-      <div class="day-desc">Bullet train from Tokyo to Kyoto (~2.5 hrs). Afternoon exploring the thousand torii gates of Fushimi Inari Shrine.</div>
-      <div class="sticker-list">⛩️ 🦊 🌿 🧧</div>
-      <div class="train-note">🚄 Tokyo → Kyoto by Shinkansen</div>
+      <span class="corner-sticker tl">🗻</span><span class="corner-sticker br">🏞️</span>
+      <div class="day-city">🗻 Tokyo → Mt. Fuji → Shizuoka/Aichi</div>
+      <div class="day-title">Mt. Fuji, Lake Kawaguchi & Oshino Hakkai</div>
+      <div class="day-desc">Check out of the hotel and board the tour bus for a full day of sightseeing at the UNESCO World Heritage Mt. Fuji area. Visit Lake Kawaguchi, a crater lake formed by a volcanic eruption nearly 3,000 years ago with postcard views of Mt. Fuji. Then Oshino Hakkai ("Eight Seas of Oshino") — eight spring-fed ponds, part of the Mt. Fuji UNESCO World Cultural Heritage site. Drive to Shizuoka/Aichi for the night.</div>
+      <span class="meal-tag">🍳 Breakfast</span><span class="meal-tag">🍽️ Dinner</span>
+      <div class="sticker-list">🗻 🏞️ 🚌 🍶</div>
+      <div class="hotel-tag">🏨 Crown Palaise Hamamatsu or Loisir Hotel Toyohashi</div>
     </div>
 
     <div class="day-card">
@@ -374,12 +490,13 @@
         <span class="day-badge">DAY 6</span>
         <span class="day-date">Wed, Oct 14</span>
       </div>
-      <span class="corner-sticker tl">🏯</span><span class="corner-sticker br">🦌</span>
-      <div class="day-city">🦌 Nara (day trip)</div>
-      <div class="day-title">Kinkaku-ji & Nara Deer Park</div>
-      <div class="day-desc">Morning at the Golden Pavilion (Kinkaku-ji), then a short train ride to Nara to feed the famously polite bowing deer.</div>
-      <div class="sticker-list">🏯 🦌 🍘 🌳</div>
-      <div class="train-note">🚄 Kyoto → Nara (local train)</div>
+      <span class="corner-sticker tl">🚄</span><span class="corner-sticker br">🦊</span>
+      <div class="day-city">⛩️ Shizuoka/Aichi → Kyoto</div>
+      <div class="day-title">Travel to Kyoto & Fushimi Inari Shrine</div>
+      <div class="day-desc">Depart Shizuoka/Aichi for Kyoto, Japan's cultural and artistic center and the country's capital for over 1,000 years. Visit the iconic Fushimi Inari Shrine, renowned for its thousands of vermilion torii gates. The rest of the day is yours to explore Kyoto at your leisure.</div>
+      <span class="meal-tag">🍳 Breakfast</span>
+      <div class="sticker-list">⛩️ 🦊 🌿 🧧</div>
+      <div class="hotel-tag">🏨 Hotel Keihan Hachijoguchi or Loisir Kyoto Hotel Toji</div>
     </div>
 
     <div class="day-card">
@@ -387,25 +504,26 @@
         <span class="day-badge">DAY 7</span>
         <span class="day-date">Thu, Oct 15</span>
       </div>
-      <span class="corner-sticker tl">🏯</span><span class="corner-sticker br">🐙</span>
-      <div class="day-city">🏯 Osaka</div>
-      <div class="day-title">Osaka Castle & Dotonbori Nights</div>
-      <div class="day-desc">Short train hop to Osaka. Explore the moated Osaka Castle by day, then dive into the neon chaos of Dotonbori — street food capital of Japan.</div>
-      <div class="sticker-list">🏯 🐙 🍢 💡</div>
-      <div class="train-note">🚄 Kyoto → Osaka by Shinkansen</div>
+      <span class="corner-sticker tl">🎍</span><span class="corner-sticker br">🙏</span>
+      <div class="day-city">⛩️ Kyoto</div>
+      <div class="day-title">Kinkaku-ji, Arashiyama Bamboo Forest & Sanjusangendo</div>
+      <div class="day-desc">In-depth exploration of Kyoto's most iconic landmarks: the golden splendor of Kinkaku-ji Temple, the serene Arashiyama Bamboo Forest, and the awe-inspiring Sanjusangendo — home to 1,001 intricately crafted statues of Kannon, the Goddess of Mercy.</div>
+      <span class="meal-tag">🍳 Breakfast</span><span class="meal-tag">🍱 Lunch</span>
+      <div class="sticker-list">🎍 🎋 🙏 📿</div>
     </div>
 
-    <div class="day-card">
+    <div class="day-card birthday">
       <div class="day-header">
         <span class="day-badge">DAY 8</span>
         <span class="day-date">Fri, Oct 16</span>
       </div>
-      <span class="corner-sticker tl">🕊️</span><span class="corner-sticker br">⛩️</span>
-      <div class="day-city">🕊️ Hiroshima & Miyajima (day trip)</div>
-      <div class="day-title">Peace Memorial & Floating Torii Gate</div>
-      <div class="day-desc">Day trip to Hiroshima's Peace Memorial Park, followed by a ferry to Miyajima Island to see the iconic floating torii gate at Itsukushima Shrine.</div>
-      <div class="sticker-list">🕊️ ⛩️ 🦌 🛳️</div>
-      <div class="train-note">🚄 Osaka → Hiroshima by Shinkansen</div>
+      <span class="corner-sticker tl">🎂</span><span class="corner-sticker br">🎉</span>
+      <div class="day-city">⛩️ Kyoto</div>
+      <div class="day-title">Free Day — Bertine's 60th Birthday Celebration! 🎂</div>
+      <div class="day-desc">A free day in Kyoto to explore at your own pace — and the perfect day to celebrate Bertine's 60th together! Details on the celebration to follow.</div>
+      <span class="meal-tag">🍳 Breakfast</span>
+      <div class="birthday-tag">🎂 Happy 60th, Bertine! 🎉</div>
+      <div class="sticker-list">🎂 🎉 🎁 🥳</div>
     </div>
 
     <div class="day-card">
@@ -413,12 +531,13 @@
         <span class="day-badge">DAY 9</span>
         <span class="day-date">Sat, Oct 17</span>
       </div>
-      <span class="corner-sticker tl">🗻</span><span class="corner-sticker br">♨️</span>
-      <div class="day-city">🗻 Hakone</div>
-      <div class="day-title">Mt. Fuji Views & Onsen Soak</div>
-      <div class="day-desc">Travel to Hakone for hot spring relaxation and (weather permitting) stunning views of Mt. Fuji across Lake Ashi.</div>
-      <div class="sticker-list">🗻 ♨️ 🚡 🍶</div>
-      <div class="train-note">🚄 Hiroshima → Hakone via Shinkansen</div>
+      <span class="corner-sticker tl">🦌</span><span class="corner-sticker br">🏯</span>
+      <div class="day-city">🦌 Kyoto → Nara → 🏯 Osaka</div>
+      <div class="day-title">Todaiji in Nara Deer Park, Dotonbori & Osaka Castle</div>
+      <div class="day-desc">Visit Tōdaiji in Nara Deer Park, the "Great Eastern Temple" and one of Japan's most historically significant temples. Then on to Osaka — first stop Dotonbori, a vibrant commercial street since the Edo Period, with free time for lunch and shopping. Finally, visit Osaka Castle. Overnight stay near KIX Airport.</div>
+      <span class="meal-tag">🍳 Breakfast</span>
+      <div class="sticker-list">🦌 🏯 🐙 🎆</div>
+      <div class="hotel-tag">🏨 Star Gate Kansai Airport Hotel (or similar)</div>
     </div>
 
     <div class="day-card">
@@ -426,25 +545,42 @@
         <span class="day-badge">DAY 10</span>
         <span class="day-date">Sun, Oct 18</span>
       </div>
-      <span class="corner-sticker tl">🥢</span><span class="corner-sticker br">💕</span>
-      <div class="day-city">🗼 Tokyo</div>
-      <div class="day-title">Back to Tokyo & Sayonara, Japan!</div>
-      <div class="day-desc">Return to Tokyo for last-minute souvenir shopping, a farewell group meal, then transfer to the airport and head home with a suitcase full of memories (and probably too many snacks).</div>
-      <div class="sticker-list">🛍️ 🎁 🍶 🥢</div>
-      <div class="train-note">🚄 Hakone → Tokyo by train</div>
+      <span class="corner-sticker tl">🧳</span><span class="corner-sticker br">💕</span>
+      <div class="day-city">🛫 Osaka (KIX) Departure</div>
+      <div class="day-title">Sayonara, Japan!</div>
+      <div class="day-desc">Make your own way to Osaka Kansai International Airport (KIX) — a local train (one stop, ~5 min) or taxi (~10 min) both work. Reach out to your tour rep for any assistance. Head home with a suitcase full of memories, and Bertine's 60th to remember forever!</div>
+      <span class="meal-tag">🍳 Breakfast</span>
+      <div class="sticker-list">🧳 🛫 💕 🌸</div>
     </div>
 
   </div>
 
+  <div class="info-grid" style="margin-top: 10px;">
+    <div class="info-card">
+      <div class="card-title">🛡️ Trip Insurance</div>
+      <p>Check with your healthcare provider and credit card company for existing coverage. Comprehensive trip insurance typically runs 10–15% of trip cost. Compare plans at InsureMyTrip, Travelex, Travel Corners, BHTP, or Travel Guard — or contact Chantale directly.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-title">📋 Reservation Checklist</div>
+      <ul>
+        <li>Intake form</li>
+        <li>Passport copy (first page)</li>
+        <li>Initial deposit</li>
+        <li>Final payment (due 90 days before departure)</li>
+      </ul>
+      <p style="margin-top:8px; opacity:0.75;">All deposits and final balances are non-refundable and non-transferable.</p>
+    </div>
+  </div>
+
   <div class="footer-cta">
-    <h3>Real Details Coming Soon</h3>
-    <p style="opacity:0.75; font-size:14px;">Flights, hotel names, exact timing, and packing info will be added right here — this page updates any time without needing a new link. Grab a copy below so you'll have it even without wifi — on the plane or once you're in Japan.</p>
+    <h3>Save This For Offline Access</h3>
+    <p style="opacity:0.75; font-size:14px;">This page updates any time with new details — no new link needed. Grab a copy below so you have it on the plane and while you're in Japan without wifi.</p>
     <div class="btn-row">
       <button class="btn btn-primary" onclick="window.print()">🖨️ Print This Page</button>
       <button class="btn btn-primary" id="downloadPdfBtn">⬇️ Download as PDF</button>
       <a class="btn btn-secondary" id="emailBtn" href="#">📧 Email This Itinerary to Myself</a>
     </div>
-    <p style="opacity:0.55; font-size:12px; margin-top:14px;">Tip: on “Print,” choose <strong>“Save as PDF”</strong> as the destination (works the same on iPhone and Android) to keep an offline copy on your phone.</p>
+    <p style="opacity:0.55; font-size:12px; margin-top:14px;">Tip: on "Print," choose <strong>"Save as PDF"</strong> as the destination (works the same on iPhone and Android) to keep an offline copy on your phone.</p>
   </div>
 </main>
 
@@ -475,7 +611,7 @@
 </script>
 
 <footer class="site-footer">
-  Made with 🌸 for our Global Vibes Travel group · Trip Hub v0.1 (sample content)
+  Made with 🌸 for our Global Vibes Travel group · Celebrating Bertine's 60th in Japan!
 </footer>
 
 </body>
