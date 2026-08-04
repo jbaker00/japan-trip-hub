@@ -194,6 +194,10 @@ header.home-header .dates {
 @media (max-width: 420px) {
   .photo-strip { grid-template-columns: 1fr 1fr; }
 }
+/* Stack photo‑strip to a single column on very narrow phones */
+@media (max-width: 500px) {
+  .photo-strip { grid-template-columns: 1fr; }
+}
 .photo-card {
   position: relative;
   border-radius: 20px;
@@ -400,13 +404,18 @@ header, footer.site-footer, .page-hero { position: relative; z-index: 1; }
 }
 
 /* ---------- Info cards ---------- */
+/* Info‑grid – used for the home‑page card deck */
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* three columns on wide screens, fall back to two then one */
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   margin-bottom: 50px;
 }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .info-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
   .info-grid { grid-template-columns: 1fr; }
 }
 .info-card {
