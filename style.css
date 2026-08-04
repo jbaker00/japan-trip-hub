@@ -153,7 +153,9 @@ header.home-header .dates {
   font-size: 15px;
 }
 .stickers-row {
-  display: none;
+  margin-top: 22px;
+  font-size: 34px;
+  letter-spacing: 14px;
 }
 
 .page-sticker {
@@ -219,7 +221,10 @@ header.home-header .dates {
   background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
 }
 .photo-emoji {
-  display: none;
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: 4px;
+  z-index: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
 }
 .photo-label {
   position: absolute;
@@ -229,20 +234,17 @@ header.home-header .dates {
   text-align: center;
   color: white;
   font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
   z-index: 2;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
   font-family: 'Cinzel', 'Helvetica Neue', Arial, sans-serif;
-  background: rgba(0,0,0,0.3);
-  padding: 12px 0;
-  backdrop-filter: blur(2px);
 }
-.photo-tokyo   { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23003d99;stop-opacity:1" /><stop offset="100%" style="stop-color:%231a1a1a;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g1)"/><rect x="50" y="120" width="30" height="180" fill="%23f5b325"/><rect x="120" y="100" width="35" height="200" fill="%23f5b325" opacity="0.8"/><rect x="200" y="80" width="25" height="220" fill="%23f5b325" opacity="0.7"/></svg>'); background-size: cover; background-position: center; }
-.photo-fuji    { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%231b5f7a;stop-opacity:1" /><stop offset="100%" style="stop-color:%2300b8d4;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g2)"/><polygon points="200,20 80,280 320,280" fill="%23ffffff" opacity="0.9"/><polygon points="200,60 130,240 270,240" fill="%23f0f6f8"/></svg>'); background-size: cover; background-position: center; }
-.photo-kyoto   { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23003d99;stop-opacity:1" /><stop offset="100%" style="stop-color:%230052CC;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g3)"/><rect x="80" y="150" width="60" height="150" fill="%23d4a574"/><rect x="170" y="130" width="50" height="170" fill="%23c8945f"/><polygon points="100,150 130,80 160,150" fill="%232c2c2c" opacity="0.6"/></svg>'); background-size: cover; background-position: center; }
-.photo-nara    { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%2300b8d4;stop-opacity:1" /><stop offset="100%" style="stop-color:%231b5f7a;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g4)"/><circle cx="100" cy="150" r="25" fill="%23b8860b" opacity="0.7"/><circle cx="180" cy="140" r="20" fill="%23b8860b" opacity="0.6"/><circle cx="260" cy="160" r="28" fill="%23b8860b" opacity="0.7"/><circle cx="320" cy="145" r="22" fill="%23b8860b" opacity="0.6"/></svg>'); background-size: cover; background-position: center; }
-.photo-osaka   { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23003d99;stop-opacity:1" /><stop offset="100%" style="stop-color:%231a1a1a;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(%23g5)"/><rect x="60" y="130" width="28" height="170" fill="%2300b8d4" opacity="0.8"/><rect x="130" y="110" width="32" height="190" fill="%2300b8d4" opacity="0.9"/><rect x="200" y="90" width="30" height="210" fill="%2300b8d4"/><rect x="270" y="125" width="26" height="175" fill="%2300b8d4" opacity="0.8"/></svg>'); background-size: cover; background-position: center; }
+.photo-tokyo   { background: linear-gradient(150deg, #003d99 0%, #1a1a1a 100%); }
+.photo-fuji    { background: linear-gradient(150deg, #1b5f7a 0%, #00b8d4 100%); }
+.photo-kyoto   { background: linear-gradient(150deg, #003d99 0%, #0052CC 100%); }
+.photo-nara    { background: linear-gradient(150deg, #00b8d4 0%, #1b5f7a 100%); }
+.photo-osaka   { background: linear-gradient(150deg, #003d99 0%, #1a1a1a 100%); }
 .photo-note {
   text-align: center;
   font-size: 13px;
