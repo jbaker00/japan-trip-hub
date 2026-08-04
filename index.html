@@ -118,7 +118,7 @@
     margin: 22px auto 0;
     background: white;
     border-radius: 18px;
-    padding: 22px 26px;
+    padding: 22px 26px 30px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     text-align: center;
   }
@@ -162,6 +162,23 @@
   .menu-links a:hover {
     background: var(--sakura-deep);
     color: white;
+  }
+  .menu-links.tabs {
+    gap: 8px;
+  }
+  .menu-links.tabs a {
+    background: var(--cream);
+    color: #7a1f2b;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+    border: 2px solid var(--sakura);
+    border-bottom: none;
+    font-size: 14px;
+  }
+  .menu-links.tabs a:hover {
+    background: var(--jr);
+    color: white;
+    border-color: var(--jr);
   }
   html { scroll-behavior: smooth; }
   .anchor-offset {
@@ -433,13 +450,10 @@
   </div>
 
   <nav class="trip-menu">
-    <div class="menu-title">Follow the Instructions for the following</div>
-    <p class="menu-line">Scroll down for <strong>itinerary, hotels, contacts, what's included / what's not included</strong>, and <strong>city by city</strong>.</p>
-    <p class="menu-line">Click here for city sights and attractions:</p>
-    <div class="menu-links">
+    <div class="menu-title">Attractions</div>
+    <div class="menu-links tabs">
       <a href="#city-tokyo">🗼 Tokyo</a>
-      <a href="#city-fuji">🗻 Mt. Fuji</a>
-      <a href="#city-shizuoka">🏞️ Shizuoka/Aichi</a>
+      <a href="#city-fuji">🗻 Mt Fuji</a>
       <a href="#city-kyoto">⛩️ Kyoto</a>
       <a href="#city-nara">🦌 Nara</a>
       <a href="#city-osaka">🏯 Osaka</a>
