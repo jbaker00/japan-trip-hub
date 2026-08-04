@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 220" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="petalPink" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffd9e3"/>
+      <stop offset="100%" stop-color="#f6a8bf"/>
+    </radialGradient>
+    <radialGradient id="petalCoral" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffc9c9"/>
+      <stop offset="100%" stop-color="#ef9a9a"/>
+    </radialGradient>
+    <radialGradient id="petalBlush" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fff0ec"/>
+      <stop offset="100%" stop-color="#ffcfd6"/>
+    </radialGradient>
+  </defs>
+  <g opacity="0.95">
+    <path d="M20,85 Q350,35 700,70 T1380,85" stroke="#b6cf9f" stroke-width="2.5" fill="none" opacity="0.4"/><g transform="translate(30,32.23082877532614) scale(0.5)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalPink)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="38" cy="55.23082877532614" rx="10" ry="5" fill="#a8c48f" transform="rotate(-15 38 55.23082877532614)" opacity="0.75"/><g transform="translate(91.69632214446469,48.7835394266242) scale(1.05)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalCoral)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(149.30448712334717,58.75074911496433) scale(0.5)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalBlush)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="136.30448712334717" cy="79.75074911496432" rx="10" ry="5" fill="#a8c48f" transform="rotate(-16 136.30448712334717 79.75074911496432)" opacity="0.75"/><g transform="translate(219.46514576644805,22.424575514941818) scale(0.65)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalPink)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(295.94573415412015,48.22119957744378) scale(0.95)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalCoral)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="287.94573415412015" cy="77.22119957744377" rx="10" ry="5" fill="#a8c48f" transform="rotate(7 287.94573415412015 77.22119957744377)" opacity="0.75"/><g transform="translate(359.29145540104,65.90880513268695) scale(0.65)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalBlush)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(435.23563725068686,27.44400826428787) scale(0.65)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalPink)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="426.23563725068686" cy="52.44400826428787" rx="10" ry="5" fill="#a8c48f" transform="rotate(-24 426.23563725068686 52.44400826428787)" opacity="0.75"/><g transform="translate(493.0180125520913,38.54746202933542) scale(0.8)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalCoral)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(566.1297934930981,64.91405237239009) scale(0.95)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalBlush)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="568.1297934930981" cy="82.91405237239009" rx="10" ry="5" fill="#a8c48f" transform="rotate(29 568.1297934930981 82.91405237239009)" opacity="0.75"/><g transform="translate(632.4858248093487,30.83265010037163) scale(1.05)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalPink)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(714.049377247453,42.78616041867163) scale(0.65)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalCoral)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="721.049377247453" cy="59.78616041867163" rx="10" ry="5" fill="#a8c48f" transform="rotate(-28 721.049377247453 59.78616041867163)" opacity="0.75"/><g transform="translate(788.8872768044843,64.36909345261907) scale(0.5)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalBlush)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(869.5468084349386,35.863738668084316) scale(0.95)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalPink)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="862.5468084349386" cy="64.86373866808432" rx="10" ry="5" fill="#a8c48f" transform="rotate(10 862.5468084349386 64.86373866808432)" opacity="0.75"/><g transform="translate(949.5701212341611,39.60246555449736) scale(0.8)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalCoral)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(1010.8553321573057,56.271645152785815) scale(0.5)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalBlush)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="1014.8553321573057" cy="76.27164515278582" rx="10" ry="5" fill="#a8c48f" transform="rotate(4 1014.8553321573057 76.27164515278582)" opacity="0.75"/><g transform="translate(1087.729136095816,24.614439900190852) scale(0.95)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalPink)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(1150.8275708993444,51.806258873939484) scale(1.05)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalCoral)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="1142.8275708993444" cy="76.80625887393948" rx="10" ry="5" fill="#a8c48f" transform="rotate(23 1142.8275708993444 76.80625887393948)" opacity="0.75"/><g transform="translate(1228.8769782271156,52.895007160788545) scale(0.5)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalBlush)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalBlush)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><g transform="translate(1308.028352250252,28.418636592357263) scale(0.5)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalPink)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalPink)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g><ellipse cx="1299.028352250252" cy="53.41863659235726" rx="10" ry="5" fill="#a8c48f" transform="rotate(-17 1299.028352250252 53.41863659235726)" opacity="0.75"/><g transform="translate(1382.6915122090984,43.330110416970626) scale(0.95)">
+      <ellipse cx="0" cy="-18" rx="14" ry="18" fill="url(#petalCoral)"/>
+      <ellipse cx="17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(72 17 -6)"/>
+      <ellipse cx="10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(144 10 14)"/>
+      <ellipse cx="-10" cy="14" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(216 -10 14)"/>
+      <ellipse cx="-17" cy="-6" rx="14" ry="18" fill="url(#petalCoral)" transform="rotate(288 -17 -6)"/>
+      <circle cx="0" cy="0" r="6" fill="#f7d774"/>
+    </g>
+  </g>
+</svg>
