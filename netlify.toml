@@ -1,0 +1,12 @@
+# Netlify configuration for japan-trip-hub
+# Plain static HTML site — no build step, publish the repo root as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Serve pretty URLs (/faqs -> faqs.html) without breaking existing .html links.
+[[redirects]]
+  from = "/*"
+  to = "/:splat.html"
+  status = 200
+  force = false
