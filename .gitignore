@@ -1,2 +1,7 @@
 source/
 *.png
+
+# Surge.sh writes this file with the surge domain on every deploy.
+# It must NOT be committed: GitHub Pages treats a CNAME file as a custom-domain
+# directive, and the surge domain breaks Pages (site serves at jbaker00.github.io).
+CNAME
